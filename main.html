@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live code Editor</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/702e7bda4d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="top">
+            <label for="code-type">Select Code Type:</label>
+            <select id="code-type" onchange="showHideTextareas()">
+                <option value="html">HTML</option>
+                <option value="html-css">HTML + CSS</option>
+                <option value="html-css-js">HTML + CSS + JS</option>
+                <!--<option value="c">C</option>
+                <option value="cpp">C++</option>
+                <option value="python">Python</option> -->
+            </select>
+        </div>
+        <div class="left">
+            <div id="html-container">
+                <label><i class="fa-brands fa-html5"></i>HTML</label>
+                <textarea id="html-code"></textarea>
+            </div>
+            <div id="css-container">
+                <label><i class="fa-brands fa-css3-alt"></i>CSS</label>
+                <textarea id="css-code"></textarea>
+            </div>
+            <div id="js-container">
+                <label><i class="fa-brands fa-js"></i>JavaScript</label>
+                <textarea id="js-code"></textarea>
+            </div>
+             <div id="c-container">
+                <label><i class="fa-solid fa-code"></i>C</label>
+                <textarea id="c-code"></textarea>
+            </div>
+            <div id="cpp-container">
+                <label><i class="fa-solid fa-code"></i>C++</label>
+                <textarea id="cpp-code"></textarea>
+            </div>
+            <div id="python-container">
+                <label><i class="fa-solid fa-code"></i>Python</label>
+                <textarea id="python-code"></textarea>
+            </div>
+        </div>
+        <div class="right">
+            <button id="run-button" onclick="run()"><i class="fa-solid fa-play"></i>Output</button>
+            <iframe id="output"></iframe>
+            <button id="download-button" onclick="downloadFile()"><i class="fa-solid fa-download"></i>Download</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
